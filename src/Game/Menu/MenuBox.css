@@ -1,0 +1,48 @@
+.MenuBox{
+    position: relative;
+    text-align: left;
+    overflow: scroll;
+
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+    /*align-items: center;*/
+    /*justify-content: space-around;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+
+    width: 100%;
+    height: 100%;
+    background: orange;
+}
+
+
+.MenuModal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    background: white;
+    border-radius: 8px;
+
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.MenuModal button{
+    margin: 8px auto;
+    width: 40%;
+    height: 32px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.MenuModal img{
+
+    margin: 16px auto;
+    max-width: 90%;
+    height: content-box;
+}

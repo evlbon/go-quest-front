@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import './GameChar.css'
 
 const GameChar = ({position, char}) => {
     const [visible,setVisible] = useState(false)

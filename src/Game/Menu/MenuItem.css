@@ -1,0 +1,42 @@
+.MenuItem{
+    display: inline-block;
+    position: relative;
+
+    width:  41%;
+    padding-top: 40%;
+    margin: 16px 0 16px 6%;
+    /*height: 100px;*/
+    /*background: red;*/
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.MenuItem:hover, .MenuItem:focus, .MenuItem:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+
+.MenuItem img{
+    top: 0;
+    position: absolute;
+    margin: 10px;
+
+    width: calc(100% - 20px);
+    height: calc(100% - 40px);
+}
+
+.MenuItem-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc(100% - 20px);
+    height: calc(100% - 40px);
+
+    border: solid darkgrey 10px ;
+    border-bottom: solid darkgrey 40px ;
+
+}

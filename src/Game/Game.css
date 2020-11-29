@@ -1,59 +1,6 @@
 .GameBox {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
     margin: 3vh auto;
     height: 94vh;
     width: calc(94vh / 16 * 9);
-    background-color: lightblue;
     overflow: hidden;
-}
-
-.GameChar {
-    width: 60%;
-    height: 70%;
-    /*background: orange;*/
-    animation: move-left_to_right 1s forwards;
-}
-
-.GameChar.right {
-    align-self: flex-end;
-
-    animation: move-right_to_left 1s forwards;
-}
-
-.GameChar.right img{
-    transform: scale(-1, 1);
-}
-
-@media only screen and (max-width: 600px) {
-    .GameBox {
-        background-color: lightblue;
-    }
-}
-
-
-@keyframes move-left_to_right {
-    0% {
-        opacity: 0;
-        transform: translate(-1000px,1000px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0,0);
-    }
-}
-
-@keyframes move-right_to_left {
-    0% {
-        opacity: 0;
-        transform: translate(1000px,1000px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0,0);
-    }
-
 }

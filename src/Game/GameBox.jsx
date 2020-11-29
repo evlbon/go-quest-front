@@ -1,20 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import './Game.css'
-import GameChar from "./GameChar";
+import Dialog from "./Dialog/Dialog";
+import Menu from "./Menu/Menu";
 
 
 const GameBox = () => {
-    const [pos, setPos] = useState('left')
-    const [char, setChar] = useState('shrek.png')
 
     return <div
         className='GameBox'
-        onClick={()=>{
-            setChar(char => char==='shrek.png'? 'gta.png':'shrek.png')
-            setPos(pos => pos==='left'? 'right':'left')
-        }}
     >
-        <GameChar position={pos} char={char}/>
+        {/*<Dialog/>*/}
+        <Menu/>
     </div>
 }
 

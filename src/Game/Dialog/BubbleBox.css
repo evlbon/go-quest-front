@@ -1,0 +1,79 @@
+.BubbleBox{
+    top: 55%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-top: 10px;
+    width: 60%;
+    animation: move-bottom_to_top 1s forwards;
+}
+
+.BubbleBox.left{
+    left: 30%;
+    animation: move-right_to_left 1s forwards;
+}
+
+
+.BubbleBox.right{
+    right: 30%;
+    animation: move-left_to_right 1s forwards;
+}
+
+.BubbleBox-body{
+    color: black;
+    position: relative;
+
+    background: #ffffff;
+    border-radius: .4em;
+
+    padding: 8px 20px 8px 20px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    /*height: 100px;*/
+}
+
+.BubbleBox-body:after {
+    content: '';
+    position: absolute;
+    border: 20px solid transparent;
+    border-bottom-color: #ffffff;
+    border-top: 0;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    margin-top: -20px;
+}
+
+
+.BubbleBox.left .BubbleBox-body:after {
+    border-left: 0;
+}
+
+.BubbleBox.right .BubbleBox-body:after {
+    border-right: 0;
+}
+
+.BubbleBox-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BubbleBox-actions-button{
+    cursor: pointer;
+    margin-top: 6px;
+    padding: 4px 4px;
+    width: 90%;
+    background: white;
+    border-radius: .4em;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    /*border: solid black 1px;*/
+}
+
+.BubbleBox-actions-button:hover, .BubbleBox-actions-button:focus, .BubbleBox-actions-button:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
