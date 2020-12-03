@@ -19,8 +19,6 @@ const MenuBox = () => {
         <MenuItem onClick={show}/>
         <MenuItem onClick={show}/>
 
-
-
         <div className="MenuModal" style={{visibility: visible? '':'hidden'}}>
             <img src="https://thiscatdoesnotexist.com/"/>
             <button onClick={hide}> Закрыть </button>

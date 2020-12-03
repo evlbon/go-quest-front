@@ -27,8 +27,8 @@ export const playGameReq = (authToken) => {
     })
 }
 
-export const saveGameReq = (results, authToken) => {
-    return axios.post(`${baseUrl}/play`, {results}, {
+export const saveGameReq = (result, authToken) => {
+    return axios.post(`${baseUrl}/play`, {result}, {
         headers: {
             authorization: authToken,
             apiToken,

@@ -4,10 +4,18 @@ import {registerReq, loginReq, userInfoReq, playGameReq, saveGameReq} from "./ap
 
 class AppStore {
     authToken = '';
+    intro = {
+        currentStep: "1",
+        finished: false,
+    }
 
     setToken(token) {
         Cookie.set('authToken', token);
         this.authToken = token;
+    }
+
+    updateIntroStep(newStep) {
+        this.intro.currentStep = newStep;
     }
 
     async getUserInfo() {
@@ -18,8 +26,8 @@ class AppStore {
         return (await playGameReq(this.authToken)).data;
     }
 
-    async saveGame() {
-        return (await saveGameReq({lol: 'kek'},this.authToken)).data;
+    async saveGame(result) {
+        return (await saveGameReq(result, this.authToken)).data;
     }
 
     async register(data) {
@@ -35,7 +43,9 @@ class AppStore {
 
 decorate(AppStore, {
     authToken: observable,
-    setToken: action
+    setToken: action,
+    intro: observable,
+    updateIntroStep: action,
 });
 
 const appStore = new AppStore();

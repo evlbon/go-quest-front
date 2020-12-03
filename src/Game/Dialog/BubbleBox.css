@@ -71,6 +71,11 @@
     box-shadow: 0 0 4px rgba(0,0,0,0.5);
     /*border: solid black 1px;*/
 }
+.selected{
+    background: #d7d7d7;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
 
 .BubbleBox-actions-button:hover, .BubbleBox-actions-button:focus, .BubbleBox-actions-button:active {
     -webkit-transform: scale(1.05);

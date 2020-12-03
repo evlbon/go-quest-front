@@ -3,17 +3,18 @@ import './GameChar.css'
 
 const GameChar = ({position, char}) => {
     const [visible,setVisible] = useState(false)
+
     useEffect(()=>{
         setVisible(false)
         setTimeout(()=>setVisible(true),10)
     },[char])
 
+    if(!char) return null;
 
     if(!visible)
         return <></>
 
     return <div
-        // style={{background: '/sherk.png'}}
         className={`GameChar ${position}`}>
         <img
             src={`/${char}`}

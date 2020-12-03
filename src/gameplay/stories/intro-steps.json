@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "char": "protagonist_casual.png",
+    "background": "kids-camp.png",
+    "position": "left",
+    "text": "Привет!",
+    "next": "2"
+  },
+  {
+    "id": "2",
+    "char": "protagonist_casual.png",
+    "background": "kids-camp.png",
+    "position": "left",
+    "text": "Это интро в наш квест",
+    "next": "3"
+  },
+  {
+    "id": "3",
+    "char": "protagonist_casual.png",
+    "background": "kids-camp.png",
+    "position": "right",
+    "text": "Если ты еще раз сюда нажмешь, то я заставлю тебя оставить свои личные данные",
+    "next": "register"
+  },
+  {
+    "id": "register"
+  }
+]

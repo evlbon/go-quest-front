@@ -1,6 +1,5 @@
 .Dialog{
     position: relative;
-    background-color: lightblue;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
