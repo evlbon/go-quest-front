@@ -61,5 +61,10 @@ export const Booklet = observer(({userInfo, onEnd}) => {
     }
 
 
+
+    if(step.type === 'pseudoSelect')
+        return
+
+
     return null;
 })

@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './MenuItem.css';
 
-const MenuItem = ({onClick}) => {
+const MenuItem = ({onClick, hover = false}) => {
     const [i,setI] = useState('')
+    const clickable = !!onClick;
+
     useEffect(()=>{
         setTimeout(()=>{
             setI("https://thiscatdoesnotexist.com/")

@@ -1,27 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MenuItem from "./MenuItem";
 
-const MenuBox = () => {
-    const [visible, setVisible] = useState(false)
+const MenuBox = ({items, defCurrentItem=null}) => {
+    const [currentItem, setCurrentItem] = useState(defCurrentItem)
+    useEffect(()=>{
+        setCurrentItem(defCurrentItem)
+    },[defCurrentItem])
 
-    const hide = () => setVisible(false)
+    const close = () => setCurrentItem(null)
 
-    const show = () => setVisible(true)
+    const choose = (index) => setCurrentItem(index)
 
     return <div
         className="MenuBox"
     >
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
-        <MenuItem onClick={show}/>
+        {items.map((item,index) => <MenuItem
+            key={index}
+            onClick={choose.bind(null, index)}
+            {...item}
+            />)}
 
-        <div className="MenuModal" style={{visibility: visible? '':'hidden'}}>
-            <img src="https://thiscatdoesnotexist.com/"/>
-            <button onClick={hide}> Закрыть </button>
+        <div className="MenuModal" style={{visibility: !!currentItem? '':'hidden'}}>
+            <img src={items[currentItem].image}/>
+
+            {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
+            {items[currentItem].selectable && <button onClick={close}> Выбрать </button>}
+            {items[currentItem].playable && <button onClick={close}> Играть </button>}
 
         </div>
 
