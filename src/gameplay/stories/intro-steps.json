@@ -1,5 +1,9 @@
 [
   {
+    "id": "welcome",
+    "next": "1"
+  },
+  {
     "id": "1",
     "char": "protagonist_casual.png",
     "background": "kids-camp.png",

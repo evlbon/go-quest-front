@@ -5,7 +5,7 @@ import {registerReq, loginReq, userInfoReq, playGameReq, saveGameReq} from "./ap
 class AppStore {
     authToken = '';
     intro = {
-        currentStep: "1",
+        currentStep: "welcome",
         finished: false,
     }
 

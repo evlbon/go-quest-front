@@ -37,8 +37,6 @@ export const Register = observer((props) => {
                     <button type="submit">Зарегистрироваться</button>
                 </div>
             </form>
-
-            <span onClick={()=>console.log(formRef)}>Войти</span>
         </div>
     )
 })

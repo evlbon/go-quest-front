@@ -4,7 +4,7 @@ import appStore from "../store";
 import Dialog from "../Game/Dialog/Dialog";
 import {set} from "mobx";
 
-export const Booklet = observer(({userInfo}) => {
+export const Booklet = observer(({userInfo, onEnd}) => {
     const [step, setStep] = useState(null);
 
     useEffect(()=>{
@@ -21,7 +21,11 @@ export const Booklet = observer(({userInfo}) => {
         appStore.saveGame(result).then(setStep).catch(alert);
     }
 
-    if(!step) return <div>Загрузка</div>
+    if(!step) return <div style={{marginTop: '70%'}} className="loader"/>
+
+    if(step.type === 'booklet_end') {
+        onEnd();
+    }
 
     if(step.type === 'story') {
         return (
