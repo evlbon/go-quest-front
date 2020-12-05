@@ -1,21 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import './MenuItem.css';
 
-const MenuItem = ({onClick, hover = false}) => {
-    const [i,setI] = useState('')
-    const clickable = !!onClick;
-
-    useEffect(()=>{
-        setTimeout(()=>{
-            setI("https://thiscatdoesnotexist.com/")
-        },Math.random()*3000)
-    },[])
+const MenuItem = ({image, onClick, hover = false}) => {
 
     return(
-        <div className="MenuItem" onClick={onClick}>
+        <div className={`MenuItem ${!!onClick&&'hoverable'} ${hover&&'hovered'} `} onClick={onClick}>
 
-            <img src={i}/>
-            <div className="MenuItem-mask"/>
+            <img src={image}/>
+            <div className={`MenuItem-mask`}/>
 
             {/*{}*/}
         </div>

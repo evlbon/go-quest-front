@@ -3,6 +3,7 @@ import {observer} from "mobx-react";
 import appStore from "../store";
 import Dialog from "../Game/Dialog/Dialog";
 import {set} from "mobx";
+import PseudoSelect from "./PseudoSelect/PseudoSelect";
 
 export const Booklet = observer(({userInfo, onEnd}) => {
     const [step, setStep] = useState(null);
@@ -63,7 +64,7 @@ export const Booklet = observer(({userInfo, onEnd}) => {
 
 
     if(step.type === 'pseudoSelect')
-        return
+        return <PseudoSelect next={saveDialog}/>
 
 
     return null;

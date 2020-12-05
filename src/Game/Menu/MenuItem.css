@@ -9,10 +9,17 @@
     /*background: red;*/
     overflow: hidden;
 
+}
+.MenuItem.hoverable{
     cursor: pointer;
 }
+.MenuItem.hovered{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
 
-.MenuItem:hover, .MenuItem:focus, .MenuItem:active {
+.MenuItem.hoverable:hover, .MenuItem.hoverable:focus, .MenuItem.hoverable:active {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
