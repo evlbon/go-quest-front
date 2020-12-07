@@ -5,7 +5,7 @@ import {getFormData} from "./utils/getFormData";
 import appStore from "./store";
 import {observer} from "mobx-react";
 
-export const Login = observer((props) => {
+export const Login = observer(({goBack}) => {
     const [hint, setHint] = useState('');
 
     const handleSubmit = (e) => {
@@ -15,14 +15,18 @@ export const Login = observer((props) => {
     }
 
     return (
-        <div>
+        <div className="Register" style={{backgroundImage: 'url(/reg_back.png)'}}>
+
+            <img src={'/login_head.png'} alt="header"/>
             <form onSubmit={handleSubmit}>
                 <InputPhone onChange={()=>setHint('')} name="phone" label="Номер телефона"/>
                 <Input onChange={()=>setHint('')} name="password" label="Пароль"/>
 
                 <div>{hint}</div>
 
-                <div style={{marginTop: 10}}>
+                <div style={{marginTop: 10}} className="login-buttons">
+
+                    <button onClick={goBack}>Назад</button>
                     <button type="submit">Войти</button>
                 </div>
             </form>

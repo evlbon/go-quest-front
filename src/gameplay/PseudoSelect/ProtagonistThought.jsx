@@ -1,11 +1,13 @@
 import React from 'react';
 import './ProtagonistThought.css'
 
-const ProtagonistThought = ({text}) => {
+const ProtagonistThought = ({text, onClick}) => {
 
     return (
-        <div className="ProtagonistThought">
+        <div className="ProtagonistThought" style={{backgroundImage: 'url(/thought.png)'}}>
             {text}
+
+            <button onClick={onClick}>Продолжить</button>
 
         </div>
     )

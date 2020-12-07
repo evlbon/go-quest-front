@@ -17,8 +17,7 @@ export const GameIntro = observer((props) => {
     if(showLogin) {
         return (
             <>
-                <div onClick={()=>setShowLogin(false)}>Назад</div>
-                <Login/>
+                <Login goBack={()=>setShowLogin(false)}/>
             </>
         )
     }

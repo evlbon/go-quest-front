@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import MenuBox from "../../Game/Menu/MenuBox";
+import ProtagonistThought from "./ProtagonistThought";
 
 const items = [
     {
@@ -24,21 +25,30 @@ const PseudoSelect = ({next}) => {
     const [pseudoItem,setPseudoItem] = useState({
         image: 'https://thiscatdoesnotexist.com/',
         playable: true,
-        play: ()=>console.log('start 1 story')
+        play: next
     })
     const [currentItem, setCurrentItem] = useState(null)
+    const [text, setText] = useState(null)
 
     useEffect(()=>{
         setTimeout(()=>{
-            setPseudoItem({...pseudoItem, hover: true})
+            setText('Нужно выбрать карточку, выберу первую')
         },1000)
+    },[])
+
+    const first = () => {
+        setText(null)
+        setTimeout(()=>{
+            setPseudoItem({...pseudoItem, hover: true})
+        },500)
         setTimeout(()=>{
             setCurrentItem(0)
-        },3000)
-    },[])
+        },1000)
+    }
 
 
     return<>
+        {text&&<ProtagonistThought text={text} onClick={first}/>}
         <MenuBox items={[pseudoItem,...items]} defCurrentItem={currentItem}/>
     </>
 };

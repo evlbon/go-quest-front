@@ -21,7 +21,8 @@ export const Register = observer((props) => {
     const formRef = useRef(null);
 
     return (
-        <div>
+        <div className="Register" style={{backgroundImage: 'url(/reg_back.png)'}}>
+            <img src={'/login_head.png'} alt="header"/>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <Input name="firstName" label="Имя"/>
                 <Input name="lastName" label="Фамилия"/>
