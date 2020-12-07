@@ -26,9 +26,15 @@ const MenuBox = ({items, defCurrentItem=null}) => {
         <div className="MenuModal">
             <img src={items[currentItem].image}/>
 
-            {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
-            {items[currentItem].selectable && <button onClick={close}> Выбрать </button>}
-            {items[currentItem].play && <button onClick={items[currentItem].play}> Играть </button>}
+            <div className="MenuModal-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cupiditate dicta dignissimos illo illum modi nobis sit vitae. Autem consequuntur culpa doloribus iusto laudantium perspiciatis unde voluptatem voluptatum. Harum, vero!
+            </div>
+
+            <div className="MenuModal-buttons">
+                {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
+                {items[currentItem].selectable && <button onClick={close}> Выбрать </button>}
+                {items[currentItem].play && <button onClick={items[currentItem].play}> Играть </button>}
+            </div>
 
         </div>
         }

@@ -2,6 +2,7 @@
     position: relative;
     text-align: left;
     overflow: scroll;
+    flex: 1;
 
     /*display: flex;*/
     /*flex-flow: row wrap;*/
@@ -12,19 +13,25 @@
 
     width: 100%;
     height: 100%;
-    background: orange;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+.MenuBox::-webkit-scrollbar {
+    display: none;
+}
 
 .MenuModal{
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 16px;
 
-    top: 20%;
-    left: 10%;
-    width: 80%;
+    top: 5%;
+    left: 5%;
+    width: 90%;
     /*height: 50%;*/
     background: white;
     border-radius: 8px;
@@ -33,16 +40,43 @@
 }
 
 .MenuModal button{
-    margin: 8px auto;
+    border: none;
+    border-radius: 16px;
     width: 40%;
     height: 32px;
     font-size: large;
     font-weight: 600;
+    cursor: pointer;
+
+
+    background: rgb(255,155,125);
+
+}
+
+.MenuModal button:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    /*box-shadow: 0 0 10px rgba(0,0,0,1);*/
+
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 5px 10px rgba(255,155,125, 0.4);
 }
 
 .MenuModal img{
-
     margin: 16px auto;
     max-width: 90%;
     height: content-box;
+
+
+}
+.MenuModal-content{
+    margin: 16px;
+    text-align: center;
+}
+.MenuModal-buttons{
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

@@ -6,8 +6,12 @@ const MenuItem = ({image, onClick, hover = false}) => {
     return(
         <div className={`MenuItem ${!!onClick&&'hoverable'} ${hover&&'hovered'} `} onClick={onClick}>
 
-            <img src={image}/>
-            <div className={`MenuItem-mask`}/>
+            <img
+                className={`MenuItem-img`}
+                src={image}/>
+            <img
+                src={'/shadow.png'}
+                className={`MenuItem-mask`}/>
 
             {/*{}*/}
         </div>

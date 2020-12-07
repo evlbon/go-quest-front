@@ -1,10 +1,15 @@
 .MenuItem{
+    border-radius: 2px;
     display: inline-block;
     position: relative;
 
-    width:  41%;
-    padding-top: 40%;
-    margin: 16px 0 16px 6%;
+    width:  31%;
+    padding-top: 36%;
+    margin: 16px 0 16px 1.75%;
+
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+
+    background: rgb(255,250,240);
     /*height: 100px;*/
     /*background: red;*/
     overflow: hidden;
@@ -16,23 +21,24 @@
 .MenuItem.hovered{
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
 .MenuItem.hoverable:hover, .MenuItem.hoverable:focus, .MenuItem.hoverable:active {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
 }
 
 
-.MenuItem img{
+.MenuItem-img{
     top: 0;
     position: absolute;
     margin: 10px;
 
-    width: calc(100% - 20px);
-    height: calc(100% - 40px);
+    width:  90%;
+    /*width: calc(100% - 20px);*/
+    /*height: calc(100% - 40px);*/
 }
 
 .MenuItem-mask{
@@ -40,10 +46,8 @@
     top: 0;
     left: 0;
 
-    width: calc(100% - 20px);
-    height: calc(100% - 40px);
-
-    border: solid darkgrey 10px ;
-    border-bottom: solid darkgrey 40px ;
+    width: 100%;
+    opacity: 35%;
+    height: 100%;
 
 }
