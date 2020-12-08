@@ -1,12 +1,15 @@
 
 .GameChar {
-    width: 60%;
-    height: 70%;
+    width: 70%;
+    height: 90%;
+    margin-left: -15%;
     /*background: orange;*/
     animation: move-left_to_right 1s forwards;
 }
 
 .GameChar.right {
+
+    margin-right: -15%;
     align-self: flex-end;
 
     animation: move-right_to_left 1s forwards;

@@ -142,6 +142,13 @@
   width: 100%;
   background: rgb(240,178,143);
   margin: 8px 0;
+
+  outline: none;
+}
+
+.Register input:focus{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .Register button{

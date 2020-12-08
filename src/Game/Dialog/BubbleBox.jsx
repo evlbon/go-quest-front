@@ -29,6 +29,9 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
     return <div
         className={`BubbleBox ${position}`}
     >
+        <div className={`BubbleBox-head`}/>
+
+
         <div className={`BubbleBox-body`}>
             {text}
         </div>
