@@ -86,9 +86,9 @@ const PseudoSelect = ({next}) => {
     const [text, setText] = useState(null)
 
     useEffect(() => {
-        // setTimeout(()=>{
-        //     setText('Нужно выбрать карточку, выберу первую')
-        // },1000)
+        setTimeout(()=>{
+            setText('Нужно выбрать карточку, выберу первую')
+        },1000)
     }, [])
 
     const first = () => {
