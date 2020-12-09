@@ -34,7 +34,7 @@ const MenuBox = ({items, defCurrentItem=null, selectedItems, onSelect}) => {
 
             <div className="MenuModal-buttons">
                 {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
-                {items[currentItem].selectable && <button onClick={()=>{onSelect(items[currentItem].id); setCurrentItem(null)}}> Выбрать </button>}
+                {items[currentItem].selectable && <button onClick={()=>{onSelect(items[currentItem].id); setCurrentItem(null)}}>{selectedItems.includes(items[currentItem].id)?'Выбрать':'Отменить выбор'}</button>}
                 {items[currentItem].play && <button onClick={items[currentItem].play}> Играть </button>}
             </div>
 
