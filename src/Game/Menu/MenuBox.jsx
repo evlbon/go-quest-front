@@ -16,8 +16,9 @@ const MenuBox = ({items, defCurrentItem=null, selectedItems, onSelect}) => {
     return <div
         className="MenuBox"
     >
+        {!items.length && <span>Нет воспоминаний связанных с этим именем</span>}
         {items && items.map((item,index) => <MenuItem
-            isSelected={selectedItems.includes(item.id)}
+            isSelected={selectedItems&&selectedItems.includes(item.id)}
             key={index}
             onClick={choose.bind(null, index)}
 

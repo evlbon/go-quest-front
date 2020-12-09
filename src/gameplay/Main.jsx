@@ -3,6 +3,7 @@ import appStore from "../store";
 import {observer} from "mobx-react";
 import Dialog from "../Game/Dialog/Dialog";
 import Menu from "../Game/Menu/Menu";
+import Woman from "../Game/Woman/Woman";
 
 export const Main = observer(({onEnd}) => {
     const [step, setStep] = useState(null);
@@ -50,7 +51,7 @@ export const Main = observer(({onEnd}) => {
     const { activity } = step;
 
     if(activity.type === 'select_woman_name') {
-        return <Menu items={[]}/>
+        return <Woman/>
     }
 
     if(activity.type === 'dialog') {
