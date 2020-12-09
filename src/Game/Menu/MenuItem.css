@@ -25,7 +25,10 @@
 }
 
 .MenuItem.selected{
-    border: 1px solid #4e0bf5;
+
+    /*box-shadow: 0 0 8px rgb(255,155,125);*/
+    width:  calc(31% - 4px);
+    border: 2px solid rgb(255, 155, 125);
 }
 
 .MenuItem.hoverable:hover, .MenuItem.hoverable:focus, .MenuItem.hoverable:active {

@@ -11,12 +11,22 @@ const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
         <div className="Menu"
              style={{backgroundImage: 'url(/menu_back.png)'}}
         >
-            {!!onSelectEnd && needSelect && needSelect !==2 &&
+
                 <div className="Menu-header">
-                    {selectedItems.length}/{needSelect};
-                    <div onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</div>
+                    {!!onSelectEnd && needSelect && needSelect !==2? <div className="menuCounterHead">
+
+                        <div className="menuCounter">
+                            {selectedItems.length}/{needSelect}
+                        </div>
+                        <button
+                            disabled={selectedItems.length<needSelect}
+                            onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</button>
+
+                    </div>:<img src={'/menu-head.png'}/>
+                    }
+
                 </div>
-            }
+
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
             <MenuBox onSelect={selectItem} selectedItems={selectedItems} items={items} defCurrentItem={defCurrentItem}/>
         </div>

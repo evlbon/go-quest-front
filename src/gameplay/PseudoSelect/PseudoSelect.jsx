@@ -6,48 +6,6 @@ import Menu from "../../Game/Menu/Menu";
 const items = [
     {
         image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        playable: true,
-        play: () => {
-        }
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
         onClick: null
     },
     {

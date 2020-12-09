@@ -13,9 +13,53 @@
     background: rgb(255,155,125);
     /*height: 80px;*/
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 5%;
 
     box-shadow: 0 0 10px rgba(0,0,0,1);
 }
+
+.menuCounterHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    font-family: "Comic Sans MS";
+    font-size: large;
+    font-weight: 700;
+}
+
 .Menu-header img{
     width: 100%;
+}
+
+.menuCounterHead button:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.menuCounterHead button:disabled:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.menuCounterHead button:disabled{
+    background: lightgrey;
+}
+
+.menuCounterHead button{
+
+    font-family: "Comic Sans MS";
+    background: rgb(138,184,178);
+    cursor: pointer;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);;
+    padding: 4px 20px;
+    font-size: medium;
+    border: none;
+    border-radius: 16px;
+    width: max-content;
 }

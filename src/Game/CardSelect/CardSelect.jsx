@@ -44,11 +44,11 @@ export const CardSelect = observer(({userInfo, onEnd}) => {
         }));
     }
     return (
-        <div>
+        <>
             {thoughtVisible &&
             <ProtagonistThought onClick={() => setThoughtVisible(false)} text={selectedCardsState.text}/>}
             <Menu onSelectEnd={onSelectEnd} needSelect={Math.floor(renderedItems.length / 2)} items={renderedItems}/>
-        </div>
+        </>
     )
 
 })
