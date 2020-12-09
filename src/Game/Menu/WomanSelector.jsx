@@ -5,7 +5,7 @@ const WomanSelector = ({onChange}) => {
 
     return (
         <div className="WomanSelector-box">
-            <select className="WomanSelector" onChange={e => onChange(e)}>
+            <select className="WomanSelector" onChange={e => onChange(e.target.value)}>
 
                 <option>Найти женщину</option>
                 <option>Саша</option>

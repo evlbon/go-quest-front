@@ -51,7 +51,7 @@ export const Main = observer(({onEnd}) => {
     const { activity } = step;
 
     if(activity.type === 'select_woman_name') {
-        return <Woman onClick={()=>saveDialog()}/>
+        return <Woman next={saveDialog}/>
     }
 
     if(activity.type === 'dialog') {
