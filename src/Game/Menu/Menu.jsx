@@ -3,6 +3,7 @@ import MenuBox from "./MenuBox";
 import './MenuBox.css';
 import './Menu.css';
 import {useArraySelect} from "../../utils/useArraySelect";
+import WomanSelector from "./WomanSelector";
 
 const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
     const [selectedItems, selectItem] = useArraySelect(needSelect);
@@ -22,7 +23,8 @@ const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
                             disabled={selectedItems.length<needSelect}
                             onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</button>
 
-                    </div>:<img src={'/menu-head.png'}/>
+                    </div>:<WomanSelector/>
+                        // <img src={'/menu-head.png'}/>
                     }
 
                 </div>
