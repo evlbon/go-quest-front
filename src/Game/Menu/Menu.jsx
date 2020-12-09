@@ -23,7 +23,7 @@ const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
                             disabled={selectedItems.length<needSelect}
                             onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</button>
 
-                    </div>:<WomanSelector/>
+                    </div>:<WomanSelector onChange={console.log}/>
                         // <img src={'/menu-head.png'}/>
                     }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import './WomanSelector.css'
 
-const WomanSelector = () => {
+const WomanSelector = ({onChange}) => {
 
     return (
         <div className="WomanSelector-box">
-            <select className="WomanSelector">
+            <select className="WomanSelector" onChange={e => onChange(e)}>
 
                 <option>Найти женщину</option>
                 <option>Саша</option>
