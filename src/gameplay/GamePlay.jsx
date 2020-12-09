@@ -6,10 +6,12 @@ import Menu from "../Game/Menu/Menu";
 import {useGameplayState} from "../utils/updateGameplayState";
 import items from "./stories/menu-cards.json";
 import {CardSelect} from "../Game/CardSelect/CardSelect";
+import {Main} from "./Main";
 
 const availableState = {
     booklet: Booklet,
-    main: ()=><div>Main</div>,
+    gameOver: ()=><div>Конец</div>,
+    main: Main,
     cardSelect: CardSelect
 
 }

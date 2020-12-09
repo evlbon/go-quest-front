@@ -18,6 +18,33 @@ export const userInfoReq = (authToken) => {
     })
 }
 
+export const startMainGameReq = (cardId, authToken) => {
+    return axios.post(`${baseUrl}/play`, {startGame: cardId}, {
+        headers: {
+            authorization: authToken,
+            apiToken,
+        }
+    })
+}
+
+export const playMainGameReq = (authToken) => {
+    return axios.post(`${baseUrl}/play`, {}, {
+        headers: {
+            authorization: authToken,
+            apiToken,
+        }
+    })
+}
+
+export const saveMainGameReq = (stepResult, authToken) => {
+    return axios.post(`${baseUrl}/play`, {stepResult}, {
+        headers: {
+            authorization: authToken,
+            apiToken,
+        }
+    })
+}
+
 export const playGameReq = (authToken) => {
     return axios.post(`${baseUrl}/play`, {}, {
         headers: {

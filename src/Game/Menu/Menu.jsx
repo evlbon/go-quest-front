@@ -11,7 +11,7 @@ const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
         <div className="Menu"
              style={{backgroundImage: 'url(/menu_back.png)'}}
         >
-            {!!onSelectEnd && needSelect &&
+            {!!onSelectEnd && needSelect && needSelect !==2 &&
                 <div className="Menu-header">
                     {selectedItems.length}/{needSelect};
                     <div onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</div>

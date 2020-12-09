@@ -7,7 +7,7 @@ import {
     playGameReq,
     saveGameReq,
     selectCardReq,
-    getSelectedCardsStateReq
+    getSelectedCardsStateReq, saveMainGameReq, playMainGameReq, startMainGameReq
 } from "./api";
 
 class AppStore {
@@ -56,12 +56,16 @@ class AppStore {
         this.setToken(token)
     }
 
-    async playMainGameReq() {
+    async startMainGame(cardId) {
+        return (await startMainGameReq(cardId, this.authToken))
+    }
+
+    async playMainGame() {
         return (await playMainGameReq(this.authToken)).data;
     }
 
-    async saveMainGameReq() {
-        return (await saveMainGameReq(this.authToken)).data
+    async saveMainGame(result) {
+        return (await saveMainGameReq(result, this.authToken)).data
     }
 }
 

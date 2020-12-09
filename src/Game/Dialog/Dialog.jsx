@@ -7,14 +7,12 @@ import {imageBase} from "../../config";
 const Dialog = ({next, position, char, text, background, actions, choose = 1}) => {
     const [available, setAvailable] = useState(false);
     useEffect(() => {
-        console.log(`render - ${available}`)
         return setTimeout(()=>{
             setAvailable(true)
-        },3000)
+        },500)
     }, [text])
 
     const limitedNext = (...props) => {
-        console.log(`next - ${available}`)
 
         if(available){
             setAvailable(false)
