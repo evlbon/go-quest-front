@@ -13,7 +13,6 @@ const Dialog = ({next, position, char, text, background, actions, choose = 1}) =
     }, [text])
 
     const limitedNext = (...props) => {
-
         if(available){
             setAvailable(false)
             next(...props)

@@ -37,7 +37,7 @@ export const CardSelect = observer(({userInfo, onEnd}) => {
         }));
     }
     if (selectedCardsState.step === 3) {
-        renderedItems = items.filter(i => selectedCardsState.selectedCards.includes(i.id) && i.id !== userInfo.gameplay.main.currentCard).map(i => ({
+        renderedItems = items.filter(i => selectedCardsState.selectedCards.includes(i.id)).map(i => ({
             ...i,
             closable: true,
             play: () => appStore.startMainGame(i.id).then(() => onEnd())

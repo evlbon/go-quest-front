@@ -16,7 +16,7 @@ const MenuBox = ({items, defCurrentItem=null, selectedItems, onSelect}) => {
     return <div
         className="MenuBox"
     >
-        {items.map((item,index) => <MenuItem
+        {items && items.map((item,index) => <MenuItem
             isSelected={selectedItems.includes(item.id)}
             key={index}
             onClick={choose.bind(null, index)}

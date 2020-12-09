@@ -11,6 +11,7 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
     },[position])
 
     const handleSelect = (action) => {
+        if(choose===1) onSelect(action);
         if(selectedActions.length < choose)
             setSelectedActions(prev => {
                 const newActions = [...prev];
@@ -19,9 +20,7 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
                 if(selectedActionIndex === -1) newActions.push(action);
                 else newActions.splice(selectedActionIndex, 1);
                 return newActions
-            })
-        else
-            onSelect(selectedActions)
+        })
     }
 
     // if(selectedActions.length === choose) onSelect(selectedActions);
