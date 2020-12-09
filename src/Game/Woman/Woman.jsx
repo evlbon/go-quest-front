@@ -3,15 +3,8 @@ import {useArraySelect} from "../../utils/useArraySelect";
 import WomanSelector from "../Menu/WomanSelector";
 import MenuBox from "../Menu/MenuBox";
 
-const items = [
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    }
-    ]
 
-
-const Woman = () => {
+const Woman = ({next}) => {
     const [name, setName] = useState('')
 
     return (
@@ -24,7 +17,19 @@ const Woman = () => {
             </div>
 
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
-            <MenuBox items={name==='Лиля'?items:[]}/>
+            <MenuBox items={
+                name==='Лиля'
+
+                    ?[
+                        {
+                            image: 'https://thiscatdoesnotexist.com/',
+                            onClick: null,
+                            play: next
+                        }
+                    ]
+                    :[]
+
+            }/>
         </div>
     )
 }
