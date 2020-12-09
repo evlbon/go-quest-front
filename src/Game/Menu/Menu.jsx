@@ -2,15 +2,23 @@ import React from "react";
 import MenuBox from "./MenuBox";
 import './MenuBox.css';
 import './Menu.css';
+import {useArraySelect} from "../../utils/useArraySelect";
 
-const Menu = ({items, defCurrentItem, info}) => {
+const Menu = ({items, defCurrentItem, onSelectEnd, needSelect}) => {
+    const [selectedItems, selectItem] = useArraySelect(needSelect);
+
     return (
         <div className="Menu"
              style={{backgroundImage: 'url(/menu_back.png)'}}
         >
-            <div className="Menu-header"><img src={'/menu-head.png'}/></div>
+            {!!onSelectEnd && needSelect &&
+                <div className="Menu-header">
+                    {selectedItems.length}/{needSelect};
+                    <div onClick={()=>onSelectEnd(selectedItems)}>Подтвердить свой выбор</div>
+                </div>
+            }
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
-            <MenuBox items={items} defCurrentItem={defCurrentItem}/>
+            <MenuBox onSelect={selectItem} selectedItems={selectedItems} items={items} defCurrentItem={defCurrentItem}/>
         </div>
     )
 }

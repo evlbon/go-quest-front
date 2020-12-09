@@ -27,6 +27,24 @@ export const playGameReq = (authToken) => {
     })
 }
 
+export const selectCardReq = (selectedCards, authToken) => {
+    return axios.post(`${baseUrl}/play`, {selectedCards}, {
+        headers: {
+            authorization: authToken,
+            apiToken,
+        }
+    })
+}
+
+export const getSelectedCardsStateReq = (authToken) => {
+    return axios.post(`${baseUrl}/play`, {}, {
+        headers: {
+            authorization: authToken,
+            apiToken,
+        }
+    })
+}
+
 export const saveGameReq = (result, authToken) => {
     return axios.post(`${baseUrl}/play`, {result}, {
         headers: {

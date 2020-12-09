@@ -24,6 +24,10 @@
     box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
+.MenuItem.selected{
+    border: 1px solid #4e0bf5;
+}
+
 .MenuItem.hoverable:hover, .MenuItem.hoverable:focus, .MenuItem.hoverable:active {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);

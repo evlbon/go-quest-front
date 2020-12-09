@@ -4,12 +4,14 @@ import appStore from "../store";
 import {Booklet} from "./Booklet";
 import Menu from "../Game/Menu/Menu";
 import {useGameplayState} from "../utils/updateGameplayState";
-import {items} from "./fake-cards";
+import items from "./stories/menu-cards.json";
+import {CardSelect} from "../Game/CardSelect/CardSelect";
 
 const availableState = {
     booklet: Booklet,
     main: ()=><div>Main</div>,
-    cardSelect: () => <Menu items={items}/>
+    cardSelect: CardSelect
+
 }
 
 export const GamePlay = observer(() => {

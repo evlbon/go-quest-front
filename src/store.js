@@ -1,6 +1,14 @@
 import { observable, action, autorun, decorate, computed } from 'mobx'
 import Cookie from "js-cookie"
-import {registerReq, loginReq, userInfoReq, playGameReq, saveGameReq} from "./api";
+import {
+    registerReq,
+    loginReq,
+    userInfoReq,
+    playGameReq,
+    saveGameReq,
+    selectCardReq,
+    getSelectedCardsStateReq
+} from "./api";
 
 class AppStore {
     authToken = '';
@@ -26,6 +34,14 @@ class AppStore {
         return (await playGameReq(this.authToken)).data;
     }
 
+    async selectCard(selectedCards) {
+        return (await selectCardReq(selectedCards, this.authToken)).data
+    }
+
+    async getSelectedCardsState() {
+        return (await getSelectedCardsStateReq(this.authToken)).data
+    }
+
     async saveGame(result) {
         return (await saveGameReq(result, this.authToken)).data;
     }
@@ -38,6 +54,14 @@ class AppStore {
     async login(data) {
         const token = (await loginReq(data)).data;
         this.setToken(token)
+    }
+
+    async playMainGameReq() {
+        return (await playMainGameReq(this.authToken)).data;
+    }
+
+    async saveMainGameReq() {
+        return (await saveMainGameReq(this.authToken)).data
     }
 }
 

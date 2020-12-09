@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import MenuItem from "./MenuItem";
+import {useArraySelect} from "../../utils/useArraySelect";
 
-const MenuBox = ({items, defCurrentItem=null}) => {
-    const [currentItem, setCurrentItem] = useState(defCurrentItem)
+const MenuBox = ({items, defCurrentItem=null, selectedItems, onSelect}) => {
+    const [currentItem, setCurrentItem] = useState(defCurrentItem);
+
     useEffect(()=>{
-        console.log('asdasdasd')
         setCurrentItem(defCurrentItem)
     },[defCurrentItem])
 
@@ -16,6 +17,7 @@ const MenuBox = ({items, defCurrentItem=null}) => {
         className="MenuBox"
     >
         {items.map((item,index) => <MenuItem
+            isSelected={selectedItems.includes(item.id)}
             key={index}
             onClick={choose.bind(null, index)}
 
@@ -32,7 +34,7 @@ const MenuBox = ({items, defCurrentItem=null}) => {
 
             <div className="MenuModal-buttons">
                 {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
-                {items[currentItem].selectable && <button onClick={close}> Выбрать </button>}
+                {items[currentItem].selectable && <button onClick={()=>{onSelect(items[currentItem].id); setCurrentItem(null)}}> Выбрать </button>}
                 {items[currentItem].play && <button onClick={items[currentItem].play}> Играть </button>}
             </div>
 
