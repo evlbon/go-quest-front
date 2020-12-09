@@ -13,18 +13,22 @@ const Woman = ({next}) => {
         >
 
             <div className="Menu-header">
+                {name}
                 <WomanSelector onChange={setName}/>
             </div>
 
+
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
+
             <MenuBox items={
                 name==='Лиля'
 
                     ?[
                         {
                             image: 'https://thiscatdoesnotexist.com/',
-                            onClick: null,
-                            play: next
+                            playable: true,
+                            play: next,
+                            closable: true
                         }
                     ]
                     :[]
