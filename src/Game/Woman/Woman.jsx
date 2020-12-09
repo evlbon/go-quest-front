@@ -3,16 +3,18 @@ import {useArraySelect} from "../../utils/useArraySelect";
 import WomanSelector from "../Menu/WomanSelector";
 import MenuBox from "../Menu/MenuBox";
 
-const items = [
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    }
-    ]
-
-
-const Woman = () => {
+const Woman = ({onClick}) => {
     const [name, setName] = useState('')
+
+    const items = [
+        {
+            image: 'https://thiscatdoesnotexist.com/',
+            "id": "18",
+            "firstDescription": "firstDescription",
+            "secondDescription": "secondDescription",
+            play: onClick
+        }
+    ]
 
     return (
         <div className="Menu"
