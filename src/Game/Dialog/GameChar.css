@@ -3,6 +3,8 @@
     width: 70%;
     height: 90%;
     margin-left: -15%;
+
+    user-select: none;
     /*background: orange;*/
     animation: move-left_to_right 1s forwards;
 }

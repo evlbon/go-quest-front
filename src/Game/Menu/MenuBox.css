@@ -48,6 +48,9 @@
     font-weight: 600;
     cursor: pointer;
 
+    outline: none;
+    user-select: none;
+
 
     background: rgb(255,155,125);
 
@@ -67,6 +70,8 @@
     margin: 16px auto;
     max-width: 90%;
     height: content-box;
+
+    user-select: none;
 
 
 }

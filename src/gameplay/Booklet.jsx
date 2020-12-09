@@ -7,19 +7,37 @@ import PseudoSelect from "./PseudoSelect/PseudoSelect";
 
 export const Booklet = observer(({userInfo, onEnd}) => {
     const [step, setStep] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(()=>{
         appStore.playGame().then(setStep).catch(alert);
     }, []);
 
     const saveDialog = () => {
-        setStep(null);
-        appStore.saveGame({isDialog: true}).then(setStep).catch(alert);
+        if(loading)
+            return;
+
+        setLoading(true);
+        appStore
+            .saveGame({isDialog: true})
+            .then(newStep => {
+                setStep(newStep);
+                setLoading(false);
+            })
+            .catch(alert);
     }
 
     const saveGame = (result) => {
-        setStep(null);
-        appStore.saveGame(result).then(setStep).catch(alert);
+        if(loading)
+            return;
+
+        setLoading(true);
+        appStore.saveGame(result)
+            .then(newStep => {
+                setStep(newStep);
+                setLoading(false);
+            })
+            .catch(alert);
     }
 
     if(!step) return <div style={{marginTop: '70%'}} className="loader"/>
@@ -28,38 +46,54 @@ export const Booklet = observer(({userInfo, onEnd}) => {
         onEnd();
     }
 
-    if(step.type === 'story') {
-        return (
-            <Dialog
-                position={step.position}
-                char={step.char}
-                text={step.text}
-                background={step.background}
-                next={saveDialog}/>
-        )
-    }
+    // if(step.type === 'story') {
+    //     return (
+    //         <Dialog
+    //             position={step.position}
+    //             char={step.char}
+    //             text={step.text}
+    //             background={step.background}
+    //             next={saveDialog}/>
+    //     )
+    // }
 
-    if(step.type==='booklet_question') {
-        const { activity: {type, question, answers, choose} } = step;
+    if(step.type==='booklet_question' || step.type === 'story' || step.type === 'booklet_answer') {
+        let params = {}
 
-        if(type==='radio') {
-            return (
-                <Dialog text={question} actions={answers} next={saveGame} background="booklet.png"/>
-            )
+        if(step.type === 'booklet_question'){
+            const { activity: {question, answers, choose}, background } = step;
+            params = {
+                text: question,
+                actions: answers,
+                next: saveGame,
+                choose: choose,
+                background: "booklet.png"
+            }
+        }
+        else if(step.type === 'story'){
+            params = {
+                text: step.text,
+                next: saveDialog,
+                position:step.position,
+                char:step.char,
+                background: step.background
+            }
+        } else {
+            params = {
+                text: step.text,
+                next: saveDialog,
+                background: "booklet.png"
+            }
         }
 
-        if(type==='checklist') {
-            return (
-                <Dialog text={question} actions={answers} next={saveGame} choose={choose} background="booklet.png"/>
-            )
-        }
+        return <Dialog {...params}/>
     }
 
-    if(step.type === 'booklet_answer') {
-        return (
-            <Dialog text={step.text} next={saveDialog} background="booklet.png"/>
-        )
-    }
+    // if(step.type === 'booklet_answer') {
+    //     return (
+    //         <Dialog text={step.text} next={saveDialog} background="booklet.png"/>
+    //     )
+    // }
 
 
 

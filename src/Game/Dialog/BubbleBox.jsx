@@ -11,17 +11,20 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
     },[position])
 
     const handleSelect = (action) => {
-        setSelectedActions(prev => {
-            const newActions = [...prev];
-            const selectedActionIndex = newActions.findIndex(i => i === action);
+        if(selectedActions.length < choose)
+            setSelectedActions(prev => {
+                const newActions = [...prev];
+                const selectedActionIndex = newActions.findIndex(i => i === action);
 
-            if(selectedActionIndex === -1) newActions.push(action);
-            else newActions.splice(selectedActionIndex, 1);
-            return newActions
-        })
+                if(selectedActionIndex === -1) newActions.push(action);
+                else newActions.splice(selectedActionIndex, 1);
+                return newActions
+            })
+        else
+            onSelect(selectedActions)
     }
 
-    if(selectedActions.length === choose) onSelect(selectedActions);
+    // if(selectedActions.length === choose) onSelect(selectedActions);
 
     if(!visible)
         return <></>

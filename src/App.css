@@ -105,6 +105,8 @@
 
 .Register img{
   width: 100%;
+
+  user-select: none;
 }
 
 .Register form{
