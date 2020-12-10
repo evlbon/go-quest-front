@@ -169,6 +169,10 @@
       "photo": "party.png",
       "description": "После этого я сел на свое место, а Камилла поспешно вышла из комнаты. Я за ней не пошел. Ребята единодушно решили прекратить игру, все начали собираться по домам, кроме Аси. Сережа попросил меня “погулять на часок”, так что я просто слонялся по дворам в наушниках. Домой пошёл, когда Серёжа написал."
     },
+    "thirdStepDescription": {
+      "photo": "party.png",
+      "description": ""
+    },
     "id": "11"
   },
   {
@@ -222,12 +226,16 @@
   {
     "cardName": "snowman",
     "firstStepDescription": {
-      "photo": "snowman.png",
+      "photo": "snowman_card.png",
       "description": "Слишком рано наступила зима. Чувствую себя совсем маленьким, когда занимаюсь лепкой. Только теперь мои работы имеют более мрачный характер."
     },
     "secondStepDescription": {
-      "photo": "snowman.png",
+      "photo": "snowman_card.png",
       "description": "Иногда страшно даже думать о количестве микробов в снеге. Но это никому не мешает веселиться: брать его в руки, лепить шары и кидать в других."
+    },
+    "thirdStepDescription": {
+      "photo": "snowman_card.png",
+      "description": ""
     },
     "id": "15"
   },
@@ -240,6 +248,10 @@
     "secondStepDescription": {
       "photo": "dining_room.png",
       "description": "Обычно я прихожу на обед, когда есть окно между пар. Беру приборы и выбираю блюда, но нас всегда торопят, потому что очередь большая. Однажды увидел чей-то волос в котлете.... После этого я всегда слежу за содержимым в тарелке. Иногда еще попадаются вилки с жиром… Пора бы научиться готовить."
+    },
+    "thirdStepDescription": {
+      "photo": "dining_room.png",
+      "description": ""
     },
     "id": "16"
   },
@@ -262,15 +274,15 @@
   {
     "cardName": "museum",
     "firstStepDescription": {
-      "photo": "museum.png",
+      "photo": "museum_card.png",
       "description": "Хожу в музеи и образовываюсь."
     },
     "secondStepDescription": {
-      "photo": "museum.png",
+      "photo": "museum_card.png",
       "description": "Меня взяли с собой Ася с Сережей. Мне кажется, что я там был третьим лишним."
     },
     "thirdStepDescription": {
-      "photo": "museum.png",
+      "photo": "museum_card.png",
       "description": "Иногда рядом со мной проходили шумные группы туристов с экскурсоводами. Были еще и дети, которые прикасались ко всяким экспонатам, чтобы лучше их рассмотреть."
     },
     "id": "18"

@@ -13,6 +13,7 @@ const WomanSelector = ({onChange}) => {
                 <option>Алена</option>
                 <option>Лиля</option>
                 <option>Лера</option>
+                <option>Вероника</option>
             </select>
 
             <img src="menu-head2.png"/>

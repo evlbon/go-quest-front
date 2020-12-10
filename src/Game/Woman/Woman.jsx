@@ -25,7 +25,7 @@ const Woman = ({next}) => {
 
                     ?[
                         {
-                            image: 'https://thiscatdoesnotexist.com/',
+                            image: 'woman_in_park.png',
                             playable: true,
                             play: next,
                             closable: true
