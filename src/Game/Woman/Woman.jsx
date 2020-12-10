@@ -21,7 +21,7 @@ const Woman = ({next}) => {
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
 
             <MenuBox items={
-                name==='Лиля'
+                name==='Вероника'
 
                     ?[
                         {
