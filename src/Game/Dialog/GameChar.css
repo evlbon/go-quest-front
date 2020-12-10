@@ -11,6 +11,7 @@
 
 .GameChar.right {
 
+    margin-left: 0;
     margin-right: -30%;
     align-self: flex-end;
 
