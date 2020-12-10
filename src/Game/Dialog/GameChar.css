@@ -11,7 +11,7 @@
 
 .GameChar.right {
 
-    margin-right: -15%;
+    margin-right: -25%;
     align-self: flex-end;
 
     animation: move-right_to_left 1s forwards;
