@@ -88,3 +88,11 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.MenuBox > .woman{
+    width: 100%;
+    padding: 40px;
+    font-weight: 600;
+    font-family: "Comic Sans MS";
+    color: rgb(255,155,125);
+}
