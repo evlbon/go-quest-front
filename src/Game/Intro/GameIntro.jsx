@@ -29,6 +29,8 @@ export const GameIntro = observer((props) => {
                     Добро пожаловать в онлайн-квест «Защити себя от вич»
                     <div className="welcome-continue">Для продолжения нажмите в любую точку экрана.</div>
                     <div className="welcome-login" onClick={(e)=>{e.stopPropagation();setShowLogin(true)}}>Уже играли? <div className="go">Войдите</div></div>
+
+                    <div>Этот квест предназначен для лиц старше 16 лет.</div>
                 </div>
             </div>
         )

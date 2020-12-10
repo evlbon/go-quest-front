@@ -19,7 +19,7 @@
 .welcome-continue {
     justify-self: center;
     font-size: 16px;
-    margin-top: 80px;
+    margin: 80px 0;
     animation: color-change 1.5s infinite;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
 }
@@ -48,4 +48,12 @@
     50% { color: #ec0434; transform: scale(1.03, 1.03); }
     70% { color: #8d0020; transform: scale(1, 1); }
     100% { color: #8d0020; }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .welcome-info{
+        font-size: 16px;
+    }
+
 }

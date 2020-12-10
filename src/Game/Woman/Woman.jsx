@@ -13,7 +13,7 @@ const Woman = ({next}) => {
         >
 
             <div className="Menu-header">
-                {name}
+                {/*{name}*/}
                 <WomanSelector onChange={setName}/>
             </div>
 
