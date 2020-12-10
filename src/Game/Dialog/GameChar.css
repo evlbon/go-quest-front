@@ -1,7 +1,7 @@
 
 .GameChar {
-    width: 110%;
-    /*height: 90%;*/
+    /*width: 110%;*/
+    height: 90%;
     margin-left: -30%;
 
     user-select: none;
