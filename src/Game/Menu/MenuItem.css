@@ -41,7 +41,8 @@
 .MenuItem-img{
     top: 0;
     position: absolute;
-    margin: 10px;
+    margin: 5%;
+    max-height: 80%;
 
     width:  90%;
     /*width: calc(100% - 20px);*/

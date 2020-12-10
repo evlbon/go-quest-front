@@ -5,3 +5,13 @@
     width: calc(94vh / 16 * 9);
     overflow: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+    .GameBox{
+
+        margin: 0;
+
+        width: 100vw;
+        height: calc(100vw / 9 * 16);
+    }
+}
