@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BASE_API_URL=https://a.goquest.online/api IMAGE_BASE=https://a.goquest.online react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

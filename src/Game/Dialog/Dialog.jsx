@@ -21,7 +21,7 @@ const Dialog = ({next, position, char, text, background, actions, choose = 1}) =
 
     return <div
         className='Dialog'
-        style={{backgroundImage: `url('${imageBase}/${background}')`}}
+        style={{backgroundImage: `url('${imageBase}/${background}')`, backgroundSize: '100%'}}
         onClick={() => actions && actions.length?'':limitedNext()}
     >
         <GameChar position={position} char={char}/>
