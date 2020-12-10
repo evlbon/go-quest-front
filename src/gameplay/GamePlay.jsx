@@ -12,7 +12,8 @@ const availableState = {
     booklet: Booklet,
     gameOver: ()=><div>Конец</div>,
     main: Main,
-    cardSelect: CardSelect
+    cardSelect: CardSelect,
+    win: ()=><div>ТЫ ПОБЕДИЛ!</div>,
 
 }
 

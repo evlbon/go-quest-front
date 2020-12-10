@@ -1,51 +1,25 @@
 import React, {useEffect, useState} from 'react';
-import MenuBox from "../../Game/Menu/MenuBox";
 import ProtagonistThought from "./ProtagonistThought";
 import Menu from "../../Game/Menu/Menu";
 
-const items = [
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-    {
-        image: 'https://thiscatdoesnotexist.com/',
-        onClick: null
-    },
-]
+const items = require('../stories/menu-cards.json')
 
 const PseudoSelect = ({next}) => {
     const [pseudoItem, setPseudoItem] = useState({
-        image: 'https://thiscatdoesnotexist.com/',
+        image: 'waiting_room_hiv_center.png',
         playable: true,
         play: next
     })
     const [currentItem, setCurrentItem] = useState(null)
     const [text, setText] = useState(null)
 
+    const itemsMap = items.map(item => ({
+        image: item.firstStepDescription.photo
+    }))
+
     useEffect(() => {
         setTimeout(()=>{
-            setText('Нужно выбрать карточку, выберу первую')
+            setText('О, это моя последняя фотография. Страшновато испытывать эту штуку впервые на старых моментах. Начну с этой.')
         },1000)
     }, [])
 
@@ -62,7 +36,7 @@ const PseudoSelect = ({next}) => {
 
     return <>
         {text && <ProtagonistThought text={text} onClick={first}/>}
-        <Menu items={[pseudoItem, ...items]} defCurrentItem={currentItem}/>
+        <Menu items={[pseudoItem, ...itemsMap]} defCurrentItem={currentItem}/>
     </>
 };
 

@@ -15,15 +15,22 @@ class AppStore {
     intro = {
         currentStep: "welcome",
         finished: false,
+        score: 0,
+    }
+
+    addIntroScore(score) {
+        this.intro.score += +score;
+        localStorage.setItem('introScore', this.intro.score);
     }
 
     setToken(token) {
-        Cookie.set('authToken', token);
         this.authToken = token;
+        Cookie.set('authToken', token);
     }
 
     updateIntroStep(newStep) {
         this.intro.currentStep = newStep;
+        localStorage.setItem('introStep', newStep);
     }
 
     async getUserInfo() {
@@ -47,7 +54,7 @@ class AppStore {
     }
 
     async register(data) {
-        const token = (await registerReq(data)).data;
+        const token = (await registerReq(data, this.intro.score)).data;
         this.setToken(token);
     }
 
@@ -74,14 +81,17 @@ decorate(AppStore, {
     setToken: action,
     intro: observable,
     updateIntroStep: action,
+    addIntroScore: action,
 });
 
 const appStore = new AppStore();
 
 autorun(() => {
     const token = Cookie.get('authToken');
-    if(!token) return;
-    appStore.setToken(token);
+
+    if(token) {
+        appStore.setToken(token);
+    }
 });
 
 export default appStore;

@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {apiToken, baseUrl} from "./config";
 
-export const registerReq = (data) => {
-    return axios.post(`${baseUrl}/register`, data, {
+export const registerReq = (data, introScore) => {
+    return axios.post(`${baseUrl}/register`, {...data, introScore }, {
         headers: {
             apiToken,
         }

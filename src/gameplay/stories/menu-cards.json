@@ -1,122 +1,310 @@
 [
   {
-    "id": "1",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "x-story",
+    "firstStepDescription": {
+      "photo": "beach.png",
+      "description": "Приехали с родителями на отдых после подачи документов в университет. Познакомился с очаровательной девушкой. Оказалось, мы живем в одном отеле. "
+    },
+    "secondStepDescription": {
+      "photo": "beach_saloon.png",
+      "description": "После знакомства мы с ней сходили в бар. Оказалось, что эта девушка старше меня на несколько лет, но она общалась со мной на равных. Очень привлекательная особа, часто шутила и смеялась. Возможно эти чувства появились лишь из-за алкоголя. Отчетливо помню момент, когда она начала неспешно водить пальцем по моей ладони, я не возражал."
+    },
+    "thirdStepDescription": {
+      "photo": "beach_saloon.png",
+      "description": "Она была довольно напориста и явно знала, чего хотела. После страстного поцелуя она предложила подняться к ней, и я согласился. Мы оказались у неё в номере и набросились друг на друга. Презерватива у меня с собой тогда не было..."
+    },
+    "id": "1"
   },
   {
-    "id": "2",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "tattoo",
+    "firstStepDescription": {
+      "photo": "tattoo.png",
+      "description": "Давно мечтал о татуировке. Нашел местечко недалеко от центра."
+    },
+    "secondStepDescription": {
+      "photo": "tattoo.png",
+      "description": "Посмотрел на работы тату-мастера, они мне понравились. Цены кусались, но деньги были."
+    },
+    "thirdStepDescription": {
+      "photo": "tattoo.png",
+      "description": "Я предварительно записался к мастеру, поэтому, когда я пришел, он уже был готов приступать. На его руках были одноразовые перчатки, рабочее место было обернуто в пищевую пленку, а на поверхности лежала салфетка. Всё его оборудование было в пакетах, он объяснил, что это необходимо для барьерной защиты. Саму машинку он собрал при мне, использовал лишь одноразовые материалы. Затем он убрал волосы на руке, протер дезинфицирующим средством, сделал набросок и начал сам процесс. Было небольно. В конце он использовал пенку, чтобы отмыть материалы, которые использовал по ходу работы."
+    },
+    "id": "2"
   },
   {
-    "id": "3",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "drugs",
+    "firstStepDescription": {
+      "photo": "smoking_zone.png",
+      "description": "Сбежали с пар по матанализу. Да простит нас Лопиталь!"
+    },
+    "secondStepDescription": {
+      "photo": "smoking_zone.png",
+      "description": "В курилке мы встретили Макара, я с ним лично никогда до этого не общался, зато с ним был знаком Глеб. Мой друг спросил, есть ли у него что-нибудь увеселительного. Тот осмотрелся, сказал, чтоб не приходил к нему больше с такими просьбами. Но Глеб продолжал настаивать и предложил сумму в два раза больше, Макар согласился. Не знаю, почему я поплелся за Глебом, но мы пошли за Макаром."
+    },
+    "thirdStepDescription": {
+      "photo": "entrance.png",
+      "description": "Мы зашли в квартиру, в нос ударил резкий запах трав. Там было очень душно и жарко. Помимо самокруток кто-то курил и кальян.  Глеб подошел к девушке, сидевшей в кресле, поднял ее голову и взглянул на зрачки. Я мельком заметил гематому на её руке и иглы, которые валялись рядом с плинтусом, отчего мне стало не по себе. Макар обернулся, спросил Глеба, сколько он хочет грамм, и ушел. Я сказал Глебу, что хочу уйти. Как только  Макар вернулся, спросил и меня, но я отказался. Глеб отдал деньги, взял мешочек с травой, и мы с ним вышли за пределы дома."
+    },
+    "id": "3"
   },
   {
-    "id": "4",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "hospital",
+    "firstStepDescription": {
+      "photo": "hospital.png",
+      "description": "Вчера резко заболел живот. Вызвали скорую - нужно срочно удалять аппендицит."
+    },
+    "secondStepDescription": {
+      "photo": "hospital.png",
+      "description": "Меня привезли в городскую больницу. Выслушав мои жалобы и посмотрев на результаты анализов, врач сказал, что нужно срочно удалять аппендицит. Он отправил меня к анестезиологу и сказал готовиться к операции."
+    },
+    "thirdStepDescription": {
+      "photo": "hospital.png",
+      "description": "Медсестра сказала, что пора направляться на операцию. Я сел в кресло-коляску, и она повезла меня по коридорам. Я лёг на кушетку. Вокруг всё было белое и чистое, мне проткнули вену иглой, начали вводить вещество для наркоза, и я погрузился в сон. Когда я очнулся, рядом со мной был врач. Мне сказали, что я потерял много крови во время операции, поэтому было необходимо переливание."
+    },
+    "id": "4"
   },
   {
-    "id": "5",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "mom",
+    "firstStepDescription": {
+      "photo": "mom.png",
+      "description": "Это моя мама и я. Здесь мне даже месяца нет. "
+    },
+    "secondStepDescription": {
+      "photo": "mom.png",
+      "description": "Мама часто принимает разные таблетки, но больна ли она ВИЧ?"
+    },
+    "thirdStepDescription": {
+      "photo": "mom.png",
+      "description": "Если бы она болела ВИЧ и заразила меня, я бы знал об этом давно."
+    },
+    "id": "5"
   },
   {
-    "id": "6",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "forest",
+    "firstStepDescription": {
+      "photo": "forest.png",
+      "description": "Давно не выбирался на природу, а совсем рядом за городом есть лес. Собрал ребят, и отправились с палатками поход."
+    },
+    "secondStepDescription": {
+      "photo": "forest.png",
+      "description": "Пытались найти грибы, но в лесу росли лишь поганки. Пока исследовали лес, нашли хорошее место для привала."
+    },
+    "thirdStepDescription": {
+      "photo": "camp.png",
+      "description": "С мальчиками мы разожгли костер, девочки подготовили место для палаток. Близился вечер, приготовили гречку с тушенкой, Серёжа играл на гитаре. Ася захватила с собой термос с глинтвейном, и мы пили по кругу теплый напиток. Вспоминали прошлые общие моменты, рассказывали забавные случаи из жизни и сплетничали о профессорах."
+    },
+    "id": "6"
   },
   {
-    "id": "7",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "hugs",
+    "firstStepDescription": {
+      "photo": "hugs.png",
+      "description": "После репетиции танцев мы пошли с Асей в продуктовый и встретили человека; у него была в руках табличка с надписью “Обнимемся?”."
+    },
+    "secondStepDescription": {
+      "photo": "hugs.png",
+      "description": "Проходящие мимо люди заметили, как мы с тем мужчиной обнимаемся, и подошли к нам."
+    },
+    "thirdStepDescription": {
+      "photo": "hugs.png",
+      "description": "Обнял я за тот раз человек семь, не меньше."
+    },
+    "id": "7"
   },
   {
-    "id": "8",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "cake",
+    "firstStepDescription": {
+      "photo": "cake.png",
+      "description": "Сам испек торт на мамин день рождение!"
+    },
+    "secondStepDescription": {
+      "photo": "cake.png",
+      "description": "Взял рецепт из интернета. Кулинар из меня не очень, но я верил, что торт получится хотя бы съедобным."
+    },
+    "thirdStepDescription": {
+      "photo": "cake.png",
+      "description": "Торт получился солёным! Кажется, я перепутал соль с сахаром. Я очень расстроился, но мама похвалила меня за старания."
+    },
+    "id": "8"
   },
   {
-    "id": "9",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "cat",
+    "firstStepDescription": {
+      "photo": "cat.png",
+      "description": "Комочек пушистого счастья."
+    },
+    "secondStepDescription": {
+      "photo": "cat.png",
+      "description": "Этого котенка мы подобрали с улицы. Он пищал под окнами нашего общежития. Серёжа уговорил взять его на некоторое время к себе."
+    },
+    "thirdStepDescription": {
+      "photo": "cat.png",
+      "description": "Котенок немного меня поцарапал, но ничего страшного."
+    },
+    "id": "9"
   },
   {
-    "id": "10",
-    "image": "https://i2-prod.mirror.co.uk/incoming/article21973993.ece/ALTERNATES/s1200d/0_PAY-Woman-with-possibly-the-biggest-lips-in-the-world-shares-pics-of-her-ever-growing-pout-after-undoing.jpg",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "dance",
+    "firstStepDescription": {
+      "photo": "ball.png",
+      "description": "Бальный вечер прошел хорошо. Даже ноги никому не передавил ;)"
+    },
+    "secondStepDescription": {
+      "photo": "ball.png",
+      "description": "Познакомился с Асей на репетиции - нас поставили в пару. Оказалось, мы с одного потока, но из разных групп. Сначала было немного непривычно долго держаться за руки и кружиться в танце, но потом мы привыкли друг другу."
+    },
+    "thirdStepDescription": {
+      "photo": "ball.png",
+      "description": "Первое наше выступление с Асей было на осеннем балу. Многие посчитали, что мы встречаемся, но это не так. Мы просто хорошие друзья."
+    },
+    "id": "10"
   },
   {
-    "id": "11",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "kiss",
+    "firstStepDescription": {
+      "photo": "party.png",
+      "description": "Одним вечером мы с ребятами собрались в общаге, кто-то принес вино и предложил сыграть в бутылочку. После нескольких кругов она указала на меня и Камиллу, мы поцеловались."
+    },
+    "secondStepDescription": {
+      "photo": "party.png",
+      "description": "После этого я сел на свое место, а Камилла поспешно вышла из комнаты. Я за ней не пошел. Ребята единодушно решили прекратить игру, все начали собираться по домам, кроме Аси. Сережа попросил меня “погулять на часок”, так что я просто слонялся по дворам в наушниках. Домой пошёл, когда Серёжа написал."
+    },
+    "id": "11"
   },
   {
-    "id": "12",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "plane",
+    "firstStepDescription": {
+      "photo": "airport.png",
+      "description": "Лечу домой на крыльях судьбы."
+    },
+    "secondStepDescription": {
+      "photo": "plane.png",
+      "description": "После первой сессии я решил слетать домой, заодно поздравить маму с днём рождения. Взял билет одним из последних, посадили в конец."
+    },
+    "thirdStepDescription": {
+      "photo": "plane.png",
+      "description": "В самолете я сидел рядом со полным мужчиной, который часто кашлял. К сожалению, наши места были вплотную."
+    },
+    "id": "12"
   },
   {
-    "id": "13",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "swimming_pool",
+    "firstStepDescription": {
+      "photo": "swimming_pool.png",
+      "description": "Снова стал ходить в бассейн. И мне нравится."
+    },
+    "secondStepDescription": {
+      "photo": "swimming_pool.png",
+      "description": "Я составил себе график тренировок. На первой неделе я выяснил, что вечерние тренировки отменяются ввиду количества людей в бассейне. Все приходят с работы и хотят расслабиться в водичке."
+    },
+    "thirdStepDescription": {
+      "photo": "swimming_pool.png",
+      "description": "Страшней всего заразиться какой-нибудь болячкой - грибок и чего похуже."
+    },
+    "id": "13"
   },
   {
-    "id": "14",
-    "image": "https://www.iheartradio.ca/image/policy:1.13304708:1598296095/am800-news-dead-body-morgue-stock-august-24-2020.jpg?f=default&$p$f=9b5130e",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "celebration",
+    "firstStepDescription": {
+      "photo": "certificate.png",
+      "description": "И ради этого я старался все 11 лет? "
+    },
+    "secondStepDescription": {
+      "photo": "certificate.png",
+      "description": "Сфотографировал аттестат, когда уже был дома. Забавно, что в руках я его смог подержать не так уж долго, потому что вскоре отдал его с документами при поступлении в университет."
+    },
+    "thirdStepDescription": {
+      "photo": "certificate.png",
+      "description": "Получили мы аттестат на выпускном, все пожали руку директора школы. Честно говоря, вся эта церемония длилась очень долго - читали стихи, а потом вручали каждому ученику класса аттестат. Жаль, наш класс был в самом конце."
+    },
+    "id": "14"
   },
   {
-    "id": "15",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "snowman",
+    "firstStepDescription": {
+      "photo": "snowman.png",
+      "description": "Слишком рано наступила зима. Чувствую себя совсем маленьким, когда занимаюсь лепкой. Только теперь мои работы имеют более мрачный характер."
+    },
+    "secondStepDescription": {
+      "photo": "snowman.png",
+      "description": "Иногда страшно даже думать о количестве микробов в снеге. Но это никому не мешает веселиться: брать его в руки, лепить шары и кидать в других."
+    },
+    "id": "15"
   },
   {
-    "id": "16",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "canteen",
+    "firstStepDescription": {
+      "photo": "dining_room.png",
+      "description": "Больше нет маминой еды, только стряпня из столовки."
+    },
+    "secondStepDescription": {
+      "photo": "dining_room.png",
+      "description": "Обычно я прихожу на обед, когда есть окно между пар. Беру приборы и выбираю блюда, но нас всегда торопят, потому что очередь большая. Однажды увидел чей-то волос в котлете.... После этого я всегда слежу за содержимым в тарелке. Иногда еще попадаются вилки с жиром… Пора бы научиться готовить."
+    },
+    "id": "16"
   },
   {
-    "id": "17",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "gym",
+    "firstStepDescription": {
+      "photo": "gym.png",
+      "description": "Привожу себя в форму."
+    },
+    "secondStepDescription": {
+      "photo": "gym.png",
+      "description": "Помимо тренировок в бассейне я решил еще немного подкачаться. В спортзале очень много всяких тренажеров, которых я до этого вообще не видел. Правда, иногда не очень приятно заниматься после какого-нибудь качка, который оставил после себя потный след на спинке тренажера."
+    },
+    "thirdStepDescription": {
+      "photo": "gym.png",
+      "description": "Именно поэтому я пользуюсь полотенцем - накидываю на поверхности перед использованием тренажера."
+    },
+    "id": "17"
   },
   {
-    "id": "18",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "museum",
+    "firstStepDescription": {
+      "photo": "museum.png",
+      "description": "Хожу в музеи и образовываюсь."
+    },
+    "secondStepDescription": {
+      "photo": "museum.png",
+      "description": "Меня взяли с собой Ася с Сережей. Мне кажется, что я там был третьим лишним."
+    },
+    "thirdStepDescription": {
+      "photo": "museum.png",
+      "description": "Иногда рядом со мной проходили шумные группы туристов с экскурсоводами. Были еще и дети, которые прикасались ко всяким экспонатам, чтобы лучше их рассмотреть."
+    },
+    "id": "18"
   },
   {
-    "id": "19",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "bar",
+    "firstStepDescription": {
+      "photo": "bar.png",
+      "description": "Сессию закрыли, а значит можно и отметить."
+    },
+    "secondStepDescription": {
+      "photo": "bar.png",
+      "description": "Ася, Камилла, Сережа и я собрались все вместе в баре. Мы все сдали сессию. Первую! Так что теперь мы студенты."
+    },
+    "thirdStepDescription": {
+      "photo": "bar.png",
+      "description": "Люблю бар за его атмосферность. Иногда прислушиваюсь к музыке и даже добавляю некоторые песни к себе в плейлист. Здесь все убрано и чисто. После десяти народа становится больше, а к полуночи уже тесно. Все ведут себя прилично, никогда не видел никаких разборок."
+    },
+    "id": "19"
   },
   {
-    "id": "20",
-    "image": "https://thiscatdoesnotexist.com/",
-    "firstDescription": "firstDescription",
-    "secondDescription": "secondDescription"
+    "cardName": "lab",
+    "firstStepDescription": {
+      "photo": "city_look.png",
+      "description": "Приятный вид из окна общежития. Любовался бы им долго, но лабораторную за меня никто не сделает."
+    },
+    "secondStepDescription": {
+      "photo": "city_look.png",
+      "description": "Провел весь день за лабой. Если ошибся в расчетах, то могут снизить оценку. Мне повезло иметь в напарниках Серёжу. Ему даётся всё легко, он предельно точен и аккуратен."
+    },
+    "thirdStepDescription": {
+      "photo": "city_look.png",
+      "description": "Иногда после двух-трех часов написания отчёта поднимаешь взгляд на вид из окна. Кажется, будто бы упускаешь что-то более важное."
+    },
+    "id": "20"
   }
 ]

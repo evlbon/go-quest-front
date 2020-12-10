@@ -42,7 +42,7 @@ export const Booklet = observer(({userInfo, onEnd}) => {
 
     if(!step) return <div style={{marginTop: '70%'}} className="loader"/>
 
-    if(step.type === 'booklet_end') {
+    if(step.activity.type === 'booklet_end') {
         onEnd();
     }
 
@@ -57,11 +57,17 @@ export const Booklet = observer(({userInfo, onEnd}) => {
     //     )
     // }
 
-    if(step.type==='booklet_question' || step.type === 'story' || step.type === 'booklet_answer') {
+    if(
+        step.activity.type==='booklet_question_checklist'
+        || step.activity.type === 'dialog'
+        || step.activity.type === 'radio'
+        || step.activity.type === 'booklet_answer'
+        || step.activity.type === 'booklet_question_radio'
+    ) {
         let params = {}
 
-        if(step.type === 'booklet_question'){
-            const { activity: {question, answers, choose}, background } = step;
+        if(step.activity.type === 'booklet_question_checklist'){
+            const { activity: {question, answers, choose} } = step;
             params = {
                 text: question,
                 actions: answers,
@@ -70,17 +76,44 @@ export const Booklet = observer(({userInfo, onEnd}) => {
                 background: "booklet.png"
             }
         }
-        else if(step.type === 'story'){
+        else if(step.activity.type === 'booklet_answer'){
+            const { activity: {text} } = step;
             params = {
-                text: step.text,
+                text: text,
+                next: saveDialog,
+                background: "booklet.png"
+            }
+        }
+        else if(step.activity.type === 'booklet_question_radio') {
+            const { activity: {question, answers} } = step;
+            params = {
+                text: question,
+                actions: answers,
+                next: saveGame,
+                background: "booklet.png"
+            }
+        }
+        else if(step.activity.type === 'dialog'){
+            params = {
+                text: step.activity.text,
                 next: saveDialog,
                 position:step.position,
                 char:step.char,
                 background: step.background
             }
-        } else {
+        }
+        else if(step.activity.type === 'radio'){
             params = {
-                text: step.text,
+                text: step.activity.text,
+                next: saveGame,
+                position:step.position,
+                char:step.char,
+                background: step.background
+            }
+        }
+        else {
+            params = {
+                text: step.activity.text,
                 next: saveDialog,
                 background: "booklet.png"
             }
@@ -97,7 +130,7 @@ export const Booklet = observer(({userInfo, onEnd}) => {
 
 
 
-    if(step.type === 'pseudoSelect')
+    if(step.activity.type === 'pseudoSelect')
         return <PseudoSelect next={saveDialog}/>
 
 

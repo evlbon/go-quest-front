@@ -10,6 +10,7 @@ const GameChar = ({position, char}) => {
     },[char])
 
     if(!char) return null;
+    if(char === 'nobody') return null;
 
     if(!visible)
         return <></>

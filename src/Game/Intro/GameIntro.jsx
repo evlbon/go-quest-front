@@ -40,13 +40,36 @@ export const GameIntro = observer((props) => {
         )
     }
 
-    return (
-        <Dialog
-            char={step.char}
-            position={step.position}
-            text={step.text}
-            next={() => appStore.updateIntroStep(step.next)}
-            background={step.background}
-        />
-    )
+    const {activity: { type, text, question, answers }} = step;
+
+    if(type === 'dialog') {
+        return (
+            <Dialog
+                char={step.char}
+                position={step.position}
+                text={text}
+                next={() => appStore.updateIntroStep(step.next)}
+                background={step.background}
+            />
+        )
+    }
+
+    if(type === 'radio') {
+        return (
+            <Dialog
+                actions={answers.map(i=>i.text)}
+                char={step.char}
+                position={step.position}
+                text={question}
+                next={(item) => {
+                    const targetStep = answers.find(answer => answer.text === item);
+                    appStore.addIntroScore(targetStep.score);
+                    appStore.updateIntroStep(targetStep.next);
+                }}
+                background={step.background}
+            />
+        )
+    }
+
+
 })

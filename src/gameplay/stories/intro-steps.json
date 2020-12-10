@@ -5,26 +5,627 @@
   },
   {
     "id": "1",
-    "char": "protagonist_casual.png",
-    "background": "kids-camp.png",
-    "position": "left",
-    "text": "Привет!",
+    "char": "nobody",
+    "background": "doctor_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Понедельник, утро. Кабинет врача."
+    },
     "next": "2"
   },
   {
     "id": "2",
-    "char": "protagonist_casual.png",
-    "background": "kids-camp.png",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
     "position": "left",
-    "text": "Это интро в наш квест",
+    "activity": {
+      "type": "dialog",
+      "text": "Спасибо, что смогли подойти."
+    },
     "next": "3"
   },
   {
     "id": "3",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Понимаю, сейчас Вы должно быть растеряны и шокированы, но теперь Вы знаете о своем заболевании и ..."
+    },
+    "next": "4"
+  },
+  {
+    "id": "4",
     "char": "protagonist_casual.png",
-    "background": "kids-camp.png",
+    "background": "doctor_room.png",
     "position": "right",
-    "text": "Если ты еще раз сюда нажмешь, то я заставлю тебя оставить свои личные данные",
+    "activity": {
+      "type": "dialog",
+      "text": "О том, что у меня СПИД?"
+    },
+    "next": "5"
+  },
+  {
+    "id": "5",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Минуточку… Вы же знаете, чем отличается ВИЧ от СПИД?"
+    },
+    "next": "6"
+  },
+  {
+    "id": "6",
+    "char": "protagonist_casual.png",
+    "background": "doctor_room.png",
+    "position": "right",
+    "activity": {
+      "question": "Конечно, ведь ...",
+      "type": "radio",
+      "answers": [
+        {
+          "text": "ВИЧ - это болезнь, которая может развиться у инфицированного СПИД",
+          "next": "7",
+          "score": 10
+        },
+        {
+          "text": "Это две разные болезни",
+          "next": "7",
+          "score": 10
+        },
+        {
+          "text": "ВИЧ - это первая стадия заражения СПИД",
+          "next": "7",
+          "score": 10
+        },
+        {
+          "text": "ВИЧ - это вирус, а СПИД - это синдром иммунодефицита",
+          "next": "7",
+          "score": 50
+        }
+      ]
+    }
+  },
+  {
+    "id": "7",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Сегодня утром пришли анализы. У Вас выявили ВИЧ - вирус иммунодефицита человека, т.е. вирус, поражающий иммунную систему."
+    },
+    "next": "8"
+  },
+  {
+    "id": "8",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Сейчас у Вас нет СПИДа - синдрома приобретенного иммунодефицита. Если Вы не начнете принимать препараты, то он может развиться. "
+    },
+    "next": "9"
+  },
+  {
+    "id": "9",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Знаете, сколько времени может жить ВИЧ-инфицированный?"
+    },
+    "next": "10"
+  },
+  {
+    "id": "10",
+    "char": "protagonist_casual.png",
+    "background": "doctor_room.png",
+    "position": "right",
+    "activity": {
+      "question": "ВИЧ-инфицированный может прожить...",
+      "type": "radio",
+      "answers": [
+        {
+          "text": "3 года, если принимает препараты",
+          "next": "11",
+          "score": 10
+        },
+        {
+          "text": "Как здоровый человек, если принимает препараты",
+          "next": "11",
+          "score": 50
+        },
+        {
+          "text": "11 лет, если принимает курсом каждые два года",
+          "next": "11",
+          "score": 10
+        },
+        {
+          "text": "1 год",
+          "next": "11",
+          "score": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "11",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Зараженные ВИЧ могут жить долго и счастливо так же, как и здоровые. Просто им нужно в течение всей дальнейшей жизни проходить антиретровирусную терапию."
+    },
+    "next": "12"
+  },
+  {
+    "id": "12",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Сейчас я дам Вам адрес местного вич-центра, встанете на учет. Только не затягивайте с этим."
+    },
+    "next": "13"
+  },
+  {
+    "id": "13",
+    "char": "protagonist_casual.png",
+    "background": "doctor_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "А от этого точно нельзя никак вылечиться?"
+    },
+    "next": "14"
+  },
+  {
+    "id": "14",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Удалось лишь двоим на этом свете."
+    },
+    "next": "15"
+  },
+  {
+    "id": "15",
+    "char": "doctor.png",
+    "background": "doctor_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "У них была пересадка костного мозга - операция очень опасная, есть большие риски просто не выжить после нее."
+    },
+    "next": "16"
+  },
+  {
+    "id": "16",
+    "char": "nobody",
+    "background": "doctor_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей забирает направление, прощается с врачом и выходит из кабинета."
+    },
+    "next": "17"
+  },
+  {
+    "id": "17",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Вторник, вечер. Комната Андрея в общежитии."
+    },
+    "next": "18"
+  },
+  {
+    "id": "18",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей лежит на кровати, а его сосед по комнате собирается уходить."
+    },
+    "next": "19"
+  },
+  {
+    "id": "19",
+    "char": "serg_winter.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Ты чет какой-то грустный. Все в порядке?"
+    },
+    "next": "20"
+  },
+  {
+    "id": "20",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Да так… устал немного."
+    },
+    "next": "21"
+  },
+  {
+    "id": "21",
+    "char": "serg_winter.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Не хочешь в бар? Там все наши собираются. Отметим начало семестра, так сказать."
+    },
+    "next": "22"
+  },
+  {
+    "id": "22",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Не… Чувствую себя фигово. Может потом как-нибудь."
+    },
+    "next": "23"
+  },
+  {
+    "id": "23",
+    "char": "serg_winter.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Ну смотри. Если что знаешь, где нас искать."
+    },
+    "next": "24"
+  },
+  {
+    "id": "24",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Сергей выходит из комнаты. Андрей остается один."
+    },
+    "next": "25"
+  },
+  {
+    "id": "25",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Может рассказать всем… Легче станет."
+    },
+    "next": "26"
+  },
+  {
+    "id": "26",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей достает телефон и пишет пост в социальной сети."
+    },
+    "next": "27"
+  },
+  {
+    "id": "27",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "\"Вчера я узнал о том, что у меня есть вич-инфекция. Уже начал прием препаратов.\""
+    },
+    "next": "28"
+  },
+  {
+    "id": "28",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "\"Побочек много, но это всяко лучше, чем скорая смерть. Вернуть бы все назад и исправить ошибки прошлого…\""
+    },
+    "next": "29"
+  },
+  {
+    "id": "29",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Запись опубликована."
+    },
+    "next": "30"
+  },
+  {
+    "id": "30",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей получает сообщение от незнакомца."
+    },
+    "next": "31"
+  },
+  {
+    "id": "31",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "А если я тебе предложу изменить прошлое, ты согласишься?"
+    },
+    "next": "32"
+  },
+  {
+    "id": "32",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Да."
+    },
+    "next": "33"
+  },
+  {
+    "id": "33",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Жди от меня посылку."
+    },
+    "next": "34"
+  },
+  {
+    "id": "34",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Кто ты?"
+    },
+    "next": "35"
+  },
+  {
+    "id": "35",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Друг."
+    },
+    "next": "36"
+  },
+  {
+    "id": "36",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей нервно ходит по комнате и слышит стук в дверь."
+    },
+    "next": "37"
+  },
+  {
+    "id": "37",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Кто там?"
+    },
+    "next": "38"
+  },
+  {
+    "id": "38",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей открывает дверь и видит под дверью коробку с запиской."
+    },
+    "next": "39"
+  },
+  {
+    "id": "39",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "\"Для Андрея. От друга \""
+    },
+    "next": "40"
+  },
+  {
+    "id": "40",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Не нравится мне все это…"
+    },
+    "next": "41"
+  },
+  {
+    "id": "41",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей заходит обратно в комнату с коробкой и получает сообщение от Незнакомца."
+    },
+    "next": "42"
+  },
+  {
+    "id": "42",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Получил?"
+    },
+    "next": "42.5"
+  },
+  {
+    "id": "42.5",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Да, что это?"
+    },
+    "next": "43"
+  },
+  {
+    "id": "43",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Открой и узнаешь."
+    },
+    "next": "44"
+  },
+  {
+    "id": "44",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Там бомба?"
+    },
+    "next": "45"
+  },
+  {
+    "id": "45",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "Нет. Я хочу тебе помочь."
+    },
+    "next": "46"
+  },
+  {
+    "id": "46",
+    "char": "stranger.png",
+    "background": "protagonist_room.png",
+    "position": "left",
+    "activity": {
+      "type": "dialog",
+      "text": "У меня нет цели тебя убить."
+    },
+    "next": "47"
+  },
+  {
+    "id": "47",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Почему я могу доверять тебе?"
+    },
+    "next": "48"
+  },
+  {
+    "id": "48",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Мы знакомы?"
+    },
+    "next": "49"
+  },
+  {
+    "id": "49",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Не получив ответ на сообщение, Андрей решает открыть коробку."
+    },
+    "next": "50"
+  },
+  {
+    "id": "50",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "В ней лежит VR-шлем. Осмотрев внимательно, Андрей находит кнопку включения и нажимает на неё."
+    },
+    "next": "51"
+  },
+  {
+    "id": "51",
+    "char": "protagonist_casual.png",
+    "background": "protagonist_room.png",
+    "position": "right",
+    "activity": {
+      "type": "dialog",
+      "text": "Была ни была!"
+    },
+    "next": "52"
+  },
+  {
+    "id": "52",
+    "char": "nobody",
+    "background": "protagonist_room.png",
+    "position": "center",
+    "activity": {
+      "type": "dialog",
+      "text": "Андрей надевает шлем и видит главный интерфейс."
+    },
     "next": "register"
   },
   {

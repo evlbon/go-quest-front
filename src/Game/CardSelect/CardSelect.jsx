@@ -27,22 +27,33 @@ export const CardSelect = observer(({userInfo, onEnd}) => {
 
     let renderedItems;
     if (selectedCardsState.step === 1) {
-        renderedItems = items.map(i => ({...i, closable: true, selectable: true}));
+        renderedItems = items.map(i => ({
+            id: i.id,
+            image: i.firstStepDescription.photo,
+            description: i.firstStepDescription.description,
+            closable: true,
+            selectable: true
+        }));
     }
     if (selectedCardsState.step === 2) {
         renderedItems = items.filter(i => selectedCardsState.selectedCards.includes(i.id)).map(i => ({
-            ...i,
+            id: i.id,
+            image: i.secondStepDescription.photo,
+            description: i.secondStepDescription.description,
             closable: true,
             selectable: true
         }));
     }
     if (selectedCardsState.step === 3) {
         renderedItems = items.filter(i => selectedCardsState.selectedCards.includes(i.id)).map(i => ({
-            ...i,
+            id: i.id,
+            image: i.thirdStepDescription.photo,
+            description: i.thirdStepDescription.description,
             closable: true,
             play: () => appStore.startMainGame(i.id).then(() => onEnd())
         }));
     }
+
     return (
         <>
             {thoughtVisible &&
