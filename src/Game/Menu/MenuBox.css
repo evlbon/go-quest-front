@@ -90,9 +90,14 @@
 }
 
 .MenuBox > .woman{
-    width: 100%;
-    padding: 40px;
+    border: 3px solid rgb(255, 155, 125);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    padding: 40px 0;
+    background: #FFFAF0;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    margin: 40px auto;
     font-weight: 600;
     font-family: "Comic Sans MS";
-    color: rgb(255,155,125);
 }

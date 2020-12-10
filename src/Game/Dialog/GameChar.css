@@ -1,8 +1,8 @@
 
 .GameChar {
     width: 110%;
-    height: 90%;
-    margin-left: -25%;
+    /*height: 90%;*/
+    margin-left: -30%;
 
     user-select: none;
     /*background: orange;*/
@@ -11,7 +11,7 @@
 
 .GameChar.right {
 
-    margin-right: -25%;
+    margin-right: -30%;
     align-self: flex-end;
 
     animation: move-right_to_left 1s forwards;
