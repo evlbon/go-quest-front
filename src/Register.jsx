@@ -6,6 +6,7 @@ import { getFormData } from "./utils/getFormData";
 import appStore from "./store";
 import {observer} from "mobx-react";
 import {set} from "mobx";
+import CheckBox from "./components/CheckBox";
 
 export const Register = observer((props) => {
     const handleSubmit = (e) => {
@@ -32,6 +33,7 @@ export const Register = observer((props) => {
                 <Input name="city" label="Город"/>
                 <Input name="school" label="Школа"/>
                 <Input name="classroom" label="Класс"/>
+                <CheckBox/>
 
                 <div>{hint}</div>
                 <div style={{marginTop: 10}}>

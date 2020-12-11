@@ -11,6 +11,8 @@ import {observer} from "mobx-react";
 import GameBox from "./Game/GameBox";
 import {GameIntro} from "./Game/Intro/GameIntro";
 import {GamePlay} from "./gameplay/GamePlay";
+import Win from "./Game/Ends/Win";
+import Loose from "./Game/Ends/Loose";
 
 const RedirectIfAuth = observer(() => {
     if(appStore.authToken)return <Redirect to="/"/>
@@ -25,9 +27,9 @@ export const BaseRouter = observer(() => {
 
             <GameBox>
                 {appStore.authToken ?
-                    <Route exact path='/' component={GamePlay}/>
+                    <Route exact path='/test' component={GamePlay}/>
                     :
-                    <Route exact path='/' component={GameIntro}/>
+                    <Route exact path='/test' component={GameIntro}/>
                 }
 
             </GameBox>

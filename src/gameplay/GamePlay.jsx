@@ -7,13 +7,15 @@ import {useGameplayState} from "../utils/updateGameplayState";
 import items from "./stories/menu-cards.json";
 import {CardSelect} from "../Game/CardSelect/CardSelect";
 import {Main} from "./Main";
+import Loose from "../Game/Ends/Loose";
+import Win from "../Game/Ends/Win";
 
 const availableState = {
     booklet: Booklet,
-    gameOver: ()=><div>Конец</div>,
+    gameOver: Loose,
     main: Main,
     cardSelect: CardSelect,
-    win: ()=><div>ТЫ ПОБЕДИЛ!</div>,
+    win: Win,
 
 }
 
