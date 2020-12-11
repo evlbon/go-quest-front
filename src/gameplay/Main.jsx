@@ -42,7 +42,7 @@ export const Main = observer(({onEnd}) => {
 
     if(!step) return <div style={{marginTop: '70%'}} className="loader"/>
 
-    if(step.id === 'card_end' || step.id === 'save_woman' || step.id === 'game_over') {
+    if(step.id === 'card_end' || step.id === 'save_woman' || step.id === 'game_over' || step.id === 'win') {
         onEnd()
         return null;
     }
