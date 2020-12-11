@@ -8,7 +8,7 @@ const MenuItem = ({image, onClick, hover = false, isSelected}) => {
 
             <img
                 className={`MenuItem-img`}
-                src={image}/>
+                src={`cards/${image}`}/>
             <img
                 src={'/shadow.png'}
                 className={`MenuItem-mask`}/>

@@ -29,7 +29,7 @@ const MenuBox = ({items, defCurrentItem = null, selectedItems, onSelect}) => {
             </div>
             {currentItem !==null &&
             <div className="MenuModal">
-                <img src={items[currentItem].image}/>
+                <img src={`cards/${items[currentItem].image}`}/>
 
                 <div className="MenuModal-content">
                     {items[currentItem].description}
