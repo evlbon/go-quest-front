@@ -27,9 +27,9 @@ export const BaseRouter = observer(() => {
 
             <GameBox>
                 {appStore.authToken ?
-                    <Route exact path='/test' component={GamePlay}/>
+                    <Route path='/' component={GamePlay}/>
                     :
-                    <Route exact path='/test' component={GameIntro}/>
+                    <Route path='/' component={GameIntro}/>
                 }
 
             </GameBox>
