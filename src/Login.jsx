@@ -4,6 +4,7 @@ import {InputPhone} from "./components/InputPhone";
 import {getFormData} from "./utils/getFormData";
 import appStore from "./store";
 import {observer} from "mobx-react";
+import CheckBox from "./components/CheckBox";
 
 export const Login = observer(({goBack}) => {
     const [hint, setHint] = useState('');
@@ -21,6 +22,7 @@ export const Login = observer(({goBack}) => {
             <form onSubmit={handleSubmit}>
                 <InputPhone onChange={()=>setHint('')} name="phone" label="Номер телефона"/>
                 <Input onChange={()=>setHint('')} name="password" label="Пароль"/>
+                <CheckBox/>
 
                 <div>{hint}</div>
 

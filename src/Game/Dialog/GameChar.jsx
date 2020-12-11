@@ -18,7 +18,7 @@ const GameChar = ({position, char}) => {
     return <div
         className={`GameChar ${position}`}>
         <img
-            src={`/${char}`}
+            src={`chars/${char}`}
             alt={char}
             style={{width: '100%', height: '100%'}}
         />
