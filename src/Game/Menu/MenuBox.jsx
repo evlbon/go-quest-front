@@ -27,7 +27,7 @@ const MenuBox = ({items, defCurrentItem = null, selectedItems, onSelect}) => {
                     {...item}
                 />)}
             </div>
-            {currentItem !==null &&
+            {currentItem !== null &&
             <div className="MenuModal">
                 <img src={`cards/${items[currentItem].image}`}/>
 
@@ -37,7 +37,13 @@ const MenuBox = ({items, defCurrentItem = null, selectedItems, onSelect}) => {
 
                 <div className="MenuModal-buttons">
                     {items[currentItem].closable && <button onClick={close}> Закрыть </button>}
-                    {items[currentItem].selectable && <button onClick={()=>{onSelect(items[currentItem].id); setCurrentItem(null)}}>{selectedItems.includes(items[currentItem].id)?'Отменить выбор':'Выбрать'}</button>}
+                    {items[currentItem].selectable && <button onClick={() => {
+                        onSelect(items[currentItem].id);
+                        setCurrentItem(null)
+                    }}>
+                        {selectedItems.includes(items[currentItem].id) ? 'Отменить выбор' : 'Выбрать'}
+                    </button>
+                    }
                     {items[currentItem].play && <button onClick={items[currentItem].play}> Играть </button>}
                 </div>
 

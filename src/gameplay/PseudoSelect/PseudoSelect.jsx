@@ -4,6 +4,8 @@ import Menu from "../../Game/Menu/Menu";
 
 const items = require('../stories/menu-cards.json')
 
+const pseudoSelectMessage = 'В инструкции к шлему было сказано что он может изменять прошлое связное с какой-то фотографией. Ой, а это как раз моя последняя фотография. Страшновато испытывать эту штуку впервые на старых моментах. Начну с этой.';
+
 const PseudoSelect = ({next}) => {
     const [pseudoItem, setPseudoItem] = useState({
         image: 'waiting_room_hiv_center.png',
@@ -19,7 +21,7 @@ const PseudoSelect = ({next}) => {
 
     useEffect(() => {
         setTimeout(()=>{
-            setText('О, это моя последняя фотография. Страшновато испытывать эту штуку впервые на старых моментах. Начну с этой.')
+            setText(pseudoSelectMessage)
         },1000)
     }, [])
 

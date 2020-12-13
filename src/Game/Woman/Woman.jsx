@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import {useArraySelect} from "../../utils/useArraySelect";
 import WomanSelector from "../Menu/WomanSelector";
 import MenuBox from "../Menu/MenuBox";
+import ProtagonistThought from "../../gameplay/PseudoSelect/ProtagonistThought";
 
 
-const Woman = ({next}) => {
+const Woman = ({next, qwe}) => {
     const [name, setName] = useState('')
+    const [thoughtVisible, setThoughtVisible] = useState(true);
 
     return (
         <div className="Menu"
@@ -19,7 +21,7 @@ const Woman = ({next}) => {
 
 
             {/*<div style={{height: '30%'}}>{info.message}</div>*/}
-
+            {thoughtVisible && <ProtagonistThought text="Для того, чтобы вернуться в прошлоем и помочь женщине с ребёнком нужно вспомнить её имя" onClick={()=>setThoughtVisible(false)}/>}
             <MenuBox items={
                 name==='Вероника'
 

@@ -12,7 +12,7 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
 
     const handleSelect = (action) => {
         if(choose===1) return onSelect(action);
-        if(selectedActions.length < choose)
+        if(selectedActions.length+1 < choose)
             setSelectedActions(prev => {
                 const newActions = [...prev];
                 const selectedActionIndex = newActions.findIndex(i => i === action);
@@ -22,6 +22,7 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
                 return newActions
         })
         else return onSelect(selectedActions)
+        console.log(selectedActions.length, choose)
     }
 
     // if(selectedActions.length === choose) onSelect(selectedActions);
@@ -36,6 +37,7 @@ const BubbleBox = ({position, text, actions = [], onSelect, choose}) => {
 
 
         <div className={`BubbleBox-body`}>
+            {!!actions.length&&<span style={{color: '#e1e1e2'}}>Выберите {choose} {choose===1?'ответ':'ответа'}<br/></span>}
             {text}
         </div>
         <div className={`BubbleBox-actions`}>

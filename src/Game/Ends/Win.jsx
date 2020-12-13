@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Win = () => {
+const Win = ({userInfo}) => {
 
     return(
         <div className="Menu"
@@ -17,8 +17,8 @@ const Win = () => {
             >
                 <div className="woman">
 
-                    Поздравляем, вы прошли квест!
-                    {/*и набрали xxx баллов, за xx минут хх секунд.*/}
+                    Поздравляем, вы прошли квест
+                    и набрали {userInfo.introScore} баллов.
                     <br/><br/>
 
                     Мы ждём завершения квеста другими участниками и подводим итоги.<br/>

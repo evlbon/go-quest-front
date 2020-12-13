@@ -22,7 +22,6 @@ export const Login = observer(({goBack}) => {
             <form onSubmit={handleSubmit}>
                 <InputPhone onChange={()=>setHint('')} name="phone" label="Номер телефона"/>
                 <Input onChange={()=>setHint('')} name="password" label="Пароль"/>
-                <CheckBox/>
 
                 <div>{hint}</div>
 
